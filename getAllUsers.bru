@@ -1,0 +1,18 @@
+meta {
+  name: getAllUsers
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/users?page=2
+  body: none
+}
+
+query {
+  page: 2
+}
+
+vars:post-response {
+  total_pages: res.body.total
+}
