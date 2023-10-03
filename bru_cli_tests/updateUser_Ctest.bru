@@ -1,0 +1,29 @@
+meta {
+  name: updateUser_Ctest
+  type: http
+  seq: 3
+}
+
+put {
+  url: https://reqres.in/api/users/{{id}}
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "name": "morpheus",
+      "job": "zion resident"
+  }
+}
+
+tests {
+  test("should be able to update users", function() {
+    const data = res.getBody();
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+}

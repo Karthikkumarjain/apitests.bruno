@@ -1,0 +1,28 @@
+meta {
+  name: createUser_Ctest
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://reqres.in/api/users
+  body: json
+}
+
+body:json {
+  {
+      "name": "morpheus",
+      "job": "leader"
+  }
+}
+
+vars:post-response {
+  id: res.body.id
+}
+
+tests {
+  test("should be able to create users", function() {
+    const data = res.getBody();
+    expect(res.getStatus()).to.equal(201);
+  });
+}
