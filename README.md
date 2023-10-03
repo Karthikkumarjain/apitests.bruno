@@ -5,7 +5,7 @@ This is a sample apitests files or collection created with the Bruno - An API Te
 ## Prerequisite
 
 * Download the tool from - https://www.usebruno.com/
-* Install nodejs(Not mandatory)
+* Install nodejs,if you want to run the requests in cli mode.
 
 
 ## Run Tests
